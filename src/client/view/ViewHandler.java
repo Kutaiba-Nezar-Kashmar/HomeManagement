@@ -1,6 +1,7 @@
 package client.view;
 
 import client.view.login.LoginController;
+import client.view.registeruser.RegisterUserController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +14,7 @@ import java.io.IOException;
 public class ViewHandler extends Application
 {
   private Stage stage = new Stage();
-  private Image image = new Image("shared/resources/icon.png");
+  private Image image = new Image("shared/resources/images/icon.png");
 
   public ViewHandler()
   {
@@ -30,8 +31,16 @@ public class ViewHandler extends Application
       loader.setLocation(getClass().getResource("login/" + id + "View.fxml"));
       root = loader.load();
       LoginController loginController = loader.getController();
-      loginController.init();
+      loginController.init(this);
       stage.setTitle("Login");
+    }
+    else if (id.equals("RegisterUser"))
+    {
+      loader.setLocation(getClass().getResource("registeruser/" + id + "View.fxml"));
+      root = loader.load();
+      RegisterUserController registerUserController = loader.getController();
+      registerUserController.init(this);
+      stage.setTitle("Register User");
     }
     assert root != null;
     scene = new Scene(root);
@@ -44,5 +53,4 @@ public class ViewHandler extends Application
   {
     openView("Login");
   }
-
 }
