@@ -1,5 +1,6 @@
 package client.view.registeruser;
 
+import client.core.HandlerFactory;
 import client.view.ViewHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

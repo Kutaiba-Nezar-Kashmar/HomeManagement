@@ -11,7 +11,7 @@
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <ImageView fitHeight="547.0" fitWidth="446.0" layoutX="-6.0" layoutY="-2.0">
+            <ImageView fitHeight="547.0" fitWidth="472.0" layoutX="-6.0" layoutY="-2.0">
                <image>
                   <Image url="@../../../shared/resources/images/createAccount.jpg" />
                </image>
@@ -65,7 +65,7 @@
                                     <Insets bottom="5.0" left="25.0" />
                                  </GridPane.margin>
                               </Label>
-                              <Label layoutX="10.0" layoutY="24.0" text="Midle Name" GridPane.columnIndex="1">
+                              <Label layoutX="10.0" layoutY="24.0" text="Middle Name" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets bottom="5.0" left="25.0" />
                                  </GridPane.margin>

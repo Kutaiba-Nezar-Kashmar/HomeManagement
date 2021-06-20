@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.5484429065743944" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="580.0" style="-fx-background-color: #ece3e1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.view.lobby.LobbyController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="473.0" prefWidth="316.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="68.0" prefWidth="316.0">
+                     <children>
+                        <Label text="Lobby">
+                           <font>
+                              <Font name="Times New Roman" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="18.0" prefWidth="200.0" />
+                  <HBox alignment="CENTER" prefHeight="107.0" prefWidth="287.0">
+                     <children>
+                        <Circle fx:id="profileImage" fill="DODGERBLUE" radius="54.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="20.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Name" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="48.0" prefWidth="317.0">
+                     <children>
+                        <GridPane prefHeight="44.0" prefWidth="329.0">
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                           <columnConstraints>
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Update profile" GridPane.columnIndex="1" />
+                              <ImageView fitWidth="26.0" onMouseClicked="#onMouseClickedOpenProfile">
+                                 <image>
+                                    <Image url="@../../../shared/resources/images/account-circle-line.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="155.0" prefWidth="317.0">
+                     <children>
+                        <ImageView fitHeight="236.0" fitWidth="317.0">
+                           <image>
+                              <Image url="@../../../shared/resources/images/logo_transparent.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="469.0" prefWidth="423.0" style="-fx-background-color: white;">
+         <children>
+            <VBox layoutX="-3.0" prefHeight="472.0" prefWidth="258.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="461.0">
+                     <children>
+                        <Label prefHeight="47.0" prefWidth="220.0" text="Wellcome to the Lobby. Click on the icon you wish to go to" wrapText="true">
+                           <HBox.margin>
+                              <Insets left="25.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Ink Free" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="413.0" prefWidth="468.0">
+                     <children>
+                        <GridPane prefHeight="427.0" prefWidth="469.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ImageView>
+                                 <image>
+                                    <Image url="@../../../shared/resources/images/line-chart-fill.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets right="200.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label text="Accounting">
+                                 <GridPane.margin>
+                                    <Insets left="50.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <ImageView GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../../../shared/resources/images/calculator-line.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets right="200.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label layoutX="60.0" layoutY="71.0" text="Calculator" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="50.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <ImageView GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../../../shared/resources/images/smartphone-line.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets right="200.0" />
+                                 </GridPane.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label layoutX="60.0" layoutY="71.0" text="Phone Log" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="50.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" onAction="#onButtonSignOut" prefHeight="46.0" prefWidth="285.0" style="-fx-background-color: #5532C2;" text="Sign out" textFill="WHITE" GridPane.rowIndex="3">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

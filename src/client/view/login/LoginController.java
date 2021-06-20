@@ -20,4 +20,9 @@ public class LoginController
   {
     viewHandler.openView("RegisterUser");
   }
+
+  @FXML public void onButtonLogin(ActionEvent actionEvent) throws IOException
+  {
+    viewHandler.openView("Lobby");
+  }
 }
