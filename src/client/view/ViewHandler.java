@@ -16,7 +16,7 @@ import java.io.IOException;
 public class ViewHandler extends Application
 {
   private Stage stage = new Stage();
-  private Image image = new Image("shared/resources/images/icon.png");
+  private Image image = new Image("shared/resources/images/favicon.png");
 
   public ViewHandler()
   {
