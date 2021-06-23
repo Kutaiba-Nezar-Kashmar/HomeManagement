@@ -1,5 +1,6 @@
 package client.view;
 
+import client.view.accounting.AccountingController;
 import client.view.lobby.LobbyController;
 import client.view.login.LoginController;
 import client.view.registeruser.RegisterUserController;
@@ -62,6 +63,15 @@ public class ViewHandler extends Application
       LobbyController lobbyController = loader.getController();
       lobbyController.init(this);
       stage.setTitle("Lobby");
+    }
+    else if (id.equals("Accounting"))
+    {
+      loader.setLocation(
+          getClass().getResource("accounting/" + id + "View.fxml"));
+      root = loader.load();
+      AccountingController accountingController = loader.getController();
+      accountingController.init(this);
+      stage.setTitle("Accounting");
     }
     assert root != null;
     scene = new Scene(root);

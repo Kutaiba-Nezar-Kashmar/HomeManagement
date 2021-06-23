@@ -102,7 +102,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <ImageView>
+                              <ImageView onMouseClicked="#onMouseClickedOpenAccounting">
                                  <image>
                                     <Image url="@../../../shared/resources/images/line-chart-fill.png" />
                                  </image>

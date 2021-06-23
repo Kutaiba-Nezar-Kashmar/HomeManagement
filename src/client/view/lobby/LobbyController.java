@@ -33,4 +33,10 @@ public class LobbyController
   {
     viewHandler.openView("Login");
   }
+
+  @FXML public void onMouseClickedOpenAccounting(MouseEvent mouseEvent)
+      throws IOException
+  {
+    viewHandler.openView("Accounting");
+  }
 }
