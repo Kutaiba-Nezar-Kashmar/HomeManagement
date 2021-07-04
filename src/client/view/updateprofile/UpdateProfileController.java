@@ -23,6 +23,7 @@ public class UpdateProfileController
 
   @FXML private Circle profileImage;
 
+  //Image moved to vieModel and bind
   private Image image = new Image("shared/resources/images/me.jpg");
   private ViewHandler viewHandler;
 

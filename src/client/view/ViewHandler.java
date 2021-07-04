@@ -16,8 +16,8 @@ import java.io.IOException;
 
 public class ViewHandler extends Application
 {
-  private Stage stage = new Stage();
-  private Image image = new Image("shared/resources/images/favicon.png");
+  private final Stage stage = new Stage();
+  private final Image image = new Image("shared/resources/images/favicon.png");
 
   public ViewHandler()
   {
@@ -29,49 +29,47 @@ public class ViewHandler extends Application
     Scene scene;
     FXMLLoader loader = new FXMLLoader();
     Parent root = null;
-    if (id.equals("Login"))
+    switch (id)
     {
-      loader.setLocation(getClass().getResource("login/" + id + "View.fxml"));
-      root = loader.load();
-      LoginController loginController = loader.getController();
-      loginController.init(this);
-      stage.setTitle("Login");
-    }
-    else if (id.equals("RegisterUser"))
-    {
-      loader.setLocation(
-          getClass().getResource("registeruser/" + id + "View.fxml"));
-      root = loader.load();
-      RegisterUserController registerUserController = loader.getController();
-      registerUserController.init(this);
-      stage.setTitle("Register User");
-    }
-    else if (id.equals("UpdateProfile"))
-    {
-      loader.setLocation(
-          getClass().getResource("updateprofile/" + id + "View.fxml"));
-      root = loader.load();
-      UpdateProfileController updateProfileController = loader.getController();
-      updateProfileController.init(this);
-      stage.setTitle("Update profile");
-    }
-    else if (id.equals("Lobby"))
-    {
-      loader.setLocation(
-          getClass().getResource("lobby/" + id + "View.fxml"));
-      root = loader.load();
-      LobbyController lobbyController = loader.getController();
-      lobbyController.init(this);
-      stage.setTitle("Lobby");
-    }
-    else if (id.equals("Accounting"))
-    {
-      loader.setLocation(
-          getClass().getResource("accounting/" + id + "View.fxml"));
-      root = loader.load();
-      AccountingController accountingController = loader.getController();
-      accountingController.init(this);
-      stage.setTitle("Accounting");
+      case "Login" -> {
+        loader.setLocation(getClass().getResource("login/" + id + "View.fxml"));
+        root = loader.load();
+        LoginController loginController = loader.getController();
+        loginController.init(this);
+        stage.setTitle("Login");
+      }
+      case "RegisterUser" -> {
+        loader.setLocation(
+            getClass().getResource("registeruser/" + id + "View.fxml"));
+        root = loader.load();
+        RegisterUserController registerUserController = loader.getController();
+        registerUserController.init(this);
+        stage.setTitle("Register User");
+      }
+      case "UpdateProfile" -> {
+        loader.setLocation(
+            getClass().getResource("updateprofile/" + id + "View.fxml"));
+        root = loader.load();
+        UpdateProfileController updateProfileController = loader
+            .getController();
+        updateProfileController.init(this);
+        stage.setTitle("Update profile");
+      }
+      case "Lobby" -> {
+        loader.setLocation(getClass().getResource("lobby/" + id + "View.fxml"));
+        root = loader.load();
+        LobbyController lobbyController = loader.getController();
+        lobbyController.init(this);
+        stage.setTitle("Lobby");
+      }
+      case "Accounting" -> {
+        loader.setLocation(
+            getClass().getResource("accounting/" + id + "View.fxml"));
+        root = loader.load();
+        AccountingController accountingController = loader.getController();
+        accountingController.init(this);
+        stage.setTitle("Accounting");
+      }
     }
     assert root != null;
     scene = new Scene(root);

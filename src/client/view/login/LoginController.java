@@ -16,6 +16,7 @@ public class LoginController
   @FXML private Rectangle emailBox;
   @FXML private Rectangle passwordBox;
 
+  // move to viewModel and bind
   private Image emailIcon = new Image("shared/resources/images/email.png");
   private Image passwordIcon = new Image("shared/resources/images/password.png");
   private ViewHandler viewHandler;

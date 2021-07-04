@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.5484429065743944" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="580.0" style="-fx-background-color: #ece3e1;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.view.lobby.LobbyController">
+<SplitPane dividerPositions="0.5190311418685121" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="580.0" style="-fx-background-color: #ece3e1;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.view.lobby.LobbyController">
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
@@ -83,7 +83,7 @@
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="469.0" prefWidth="423.0" style="-fx-background-color: white;">
          <children>
-            <VBox layoutX="-3.0" prefHeight="472.0" prefWidth="258.0">
+            <VBox layoutX="-3.0" prefHeight="472.0" prefWidth="281.0">
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="461.0">
                      <children>
@@ -162,13 +162,16 @@
                               <Button mnemonicParsing="false" onAction="#onButtonSignOut" prefHeight="46.0" prefWidth="285.0" style="-fx-background-color: #5532C2;" text="Sign out" textFill="WHITE" GridPane.rowIndex="4">
                                  <cursor>
                                     <Cursor fx:constant="HAND" />
-                                 </cursor></Button>
+                                 </cursor>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" />
+                                 </GridPane.margin></Button>
                               <Label layoutX="134.0" layoutY="43.0" text="Help" GridPane.rowIndex="3">
                                  <GridPane.margin>
                                     <Insets left="50.0" />
                                  </GridPane.margin>
                               </Label>
-                              <ImageView fx:id="helpIconView" GridPane.rowIndex="3">
+                              <ImageView GridPane.rowIndex="3">
                                  <GridPane.margin>
                                     <Insets right="200.0" />
                                  </GridPane.margin>
@@ -178,6 +181,7 @@
                                  <image>
                                     <Image url="@../../../shared/resources/images/help.png" />
                                  </image>
+                                
                               </ImageView>
                            </children>
                         </GridPane>
