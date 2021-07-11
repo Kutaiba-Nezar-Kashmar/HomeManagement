@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.3695652173913043" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="968.0" style="-fx-background-color: #ece3e1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.view.depts.DeptController">
+  <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="654.0" prefWidth="406.0">
+         <children>
+            <VBox prefHeight="656.0" prefWidth="354.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="84.0" prefWidth="370.0">
+                     <children>
+                        <Label text="Dept">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Times New Roman" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox prefHeight="18.0" prefWidth="370.0" />
+                  <HBox alignment="CENTER" prefHeight="151.0" prefWidth="370.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="71.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="370.0">
+                     <children>
+                        <Label text="Name" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="18.0" prefWidth="370.0" />
+                  <HBox alignment="CENTER" prefHeight="76.0" prefWidth="370.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #5532C2;" text="Save File" textFill="WHITE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="654.0" prefWidth="538.0" style="-fx-background-color: white;">
+         <children>
+            <VBox layoutX="-1.0" prefHeight="654.0" prefWidth="606.0">
+               <children>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="59.0" prefWidth="606.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#onButtonBack" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #5532C2;" text="Go back" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="18.0" prefWidth="200.0" />
+                  <HBox prefHeight="469.0" prefWidth="603.0">
+                     <children>
+                        <ScrollPane prefHeight="455.0" prefWidth="630.0">
+                          <content>
+                              <TableView prefHeight="508.0" prefWidth="607.0" style="-fx-background-color: white;">
+                                <columns>
+                                  <TableColumn prefWidth="119.0" text="Date started" />
+                                  <TableColumn prefWidth="128.0" text="Deadline" />
+                                    <TableColumn prefWidth="128.0" text="Total dept" />
+                                    <TableColumn prefWidth="128.0" text="Total payed" />
+                                    <TableColumn prefWidth="128.0" text="Total left" />
+                                </columns>
+                              </TableView>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="106.0" prefWidth="606.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #5532C2;" text="Add row" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#onButtonEdit" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #5532C2;" text="Modify" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button layoutX="85.0" layoutY="48.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #5532C2;" text="Delete" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

@@ -1,6 +1,8 @@
 package client.view;
 
 import client.view.accounting.AccountingController;
+import client.view.depts.DeptController;
+import client.view.editdepts.EditDeptsController;
 import client.view.lobby.LobbyController;
 import client.view.login.LoginController;
 import client.view.registeruser.RegisterUserController;
@@ -10,7 +12,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -69,6 +73,32 @@ public class ViewHandler extends Application
         AccountingController accountingController = loader.getController();
         accountingController.init(this);
         stage.setTitle("Accounting");
+      }
+      case "Graf" -> {
+        loader.setLocation(
+            getClass().getResource("accounting/" + id + "View.fxml"));
+        root = loader.load();
+        AccountingController accountingController = loader.getController();
+        accountingController.init(this);
+        Stage stageGraf = new Stage();
+        stageGraf.setTitle("Graf");
+        stageGraf.setScene(new Scene(root));
+        stageGraf.show();
+      }
+      case "Dept" -> {
+        loader.setLocation(getClass().getResource("depts/" + id + "View.fxml"));
+        root = loader.load();
+        DeptController deptController = loader.getController();
+        deptController.init(this);
+        stage.setTitle("Dept");
+      }
+      case "EditDept" -> {
+        loader.setLocation(
+            getClass().getResource("editdepts/" + id + "View.fxml"));
+        root = loader.load();
+        EditDeptsController editDeptsController = loader.getController();
+        editDeptsController.init(this);
+        stage.setTitle("Edit Dept");
       }
     }
     assert root != null;
