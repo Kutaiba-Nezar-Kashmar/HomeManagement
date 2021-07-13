@@ -1,10 +1,12 @@
 package client.view;
 
 import client.view.accounting.AccountingController;
+import client.view.currency.CurrencyController;
 import client.view.depts.DeptController;
 import client.view.editdepts.EditDeptsController;
 import client.view.lobby.LobbyController;
 import client.view.login.LoginController;
+import client.view.phonelog.PhoneLogController;
 import client.view.registeruser.RegisterUserController;
 import client.view.updateprofile.UpdateProfileController;
 import javafx.application.Application;
@@ -12,9 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -99,6 +99,22 @@ public class ViewHandler extends Application
         EditDeptsController editDeptsController = loader.getController();
         editDeptsController.init(this);
         stage.setTitle("Edit Dept");
+      }
+      case "Currency" -> {
+        loader.setLocation(
+            getClass().getResource("currency/" + id + "View.fxml"));
+        root = loader.load();
+        CurrencyController currencyController = loader.getController();
+        currencyController.init(this);
+        stage.setTitle("Currency");
+      }
+      case "PhoneLog" -> {
+        loader.setLocation(
+            getClass().getResource("phonelog/" + id + "View.fxml"));
+        root = loader.load();
+        PhoneLogController phoneLogController = loader.getController();
+        phoneLogController.init(this);
+        stage.setTitle("Phone Log");
       }
     }
     assert root != null;

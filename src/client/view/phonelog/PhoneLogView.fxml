@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="869.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.view.phonelog.PhoneLogController">
+   <children>
+      <VBox prefHeight="723.0" prefWidth="869.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="1036.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onButtonBack" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #5532C2;" text="Go back" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="576.0" prefWidth="1036.0">
+               <children>
+                  <ScrollPane prefHeight="597.0" prefWidth="1371.0" style="-fx-background-color: white;">
+                    <content>
+                        <TableView prefHeight="577.0" prefWidth="1328.0">
+                          <columns>
+                            <TableColumn prefWidth="241.0" text="Name" />
+                            <TableColumn minWidth="5.0" prefWidth="171.0" text="Country" />
+                              <TableColumn minWidth="5.0" prefWidth="171.0" text="Country code" />
+                              <TableColumn minWidth="5.0" prefWidth="211.0" text="Phone number" />
+                              <TableColumn minWidth="5.0" prefWidth="211.0" text="Email Address" />
+                              <TableColumn minWidth="5.0" prefWidth="320.0" text="Address" />
+                          </columns>
+                        </TableView>
+                    </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onButtonAddPerson" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #5532C2;" text="Add person" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #5532C2;" text="Edit" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: white; -fx-border-color: black;" text="Delete">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: white; -fx-border-color: black;" text="Save file">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

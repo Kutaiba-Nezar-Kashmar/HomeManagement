@@ -47,4 +47,14 @@ public class LobbyController
   {
     viewHandler.openView("Accounting");
   }
+
+  @FXML public void onButtonCurrency(MouseEvent mouseEvent) throws IOException
+  {
+    viewHandler.openView("Currency");
+  }
+
+ @FXML public void onButtonPhoneLog(MouseEvent mouseEvent) throws IOException
+ {
+    viewHandler.openView("PhoneLog");
+  }
 }
