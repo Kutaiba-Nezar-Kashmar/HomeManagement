@@ -57,4 +57,9 @@ public class LobbyController
  {
     viewHandler.openView("PhoneLog");
   }
+
+  @FXML public void onButtonHelp(MouseEvent mouseEvent) throws IOException
+  {
+    viewHandler.openView("Help");
+  }
 }

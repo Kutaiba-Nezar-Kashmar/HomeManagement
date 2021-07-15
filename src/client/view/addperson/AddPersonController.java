@@ -1,4 +1,4 @@
-package client.view.phonelog;
+package client.view.addperson;
 
 import client.view.ViewHandler;
 import javafx.event.ActionEvent;
@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 
 import java.io.IOException;
 
-public class PhoneLogController
+public class AddPersonController
 {
   private ViewHandler viewHandler;
 
@@ -17,12 +17,14 @@ public class PhoneLogController
 
   @FXML public void onButtonBack(ActionEvent actionEvent) throws IOException
   {
-    viewHandler.openView("Lobby");
+    viewHandler.openView("PhoneLog");
+  }
+
+  @FXML public void onButtonCancel(ActionEvent actionEvent)
+  {
   }
 
   @FXML public void onButtonAddPerson(ActionEvent actionEvent)
-      throws IOException
   {
-    viewHandler.openView("AddPerson");
   }
 }

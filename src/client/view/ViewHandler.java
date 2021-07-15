@@ -1,9 +1,11 @@
 package client.view;
 
 import client.view.accounting.AccountingController;
+import client.view.addperson.AddPersonController;
 import client.view.currency.CurrencyController;
 import client.view.depts.DeptController;
 import client.view.editdepts.EditDeptsController;
+import client.view.help.HelpController;
 import client.view.lobby.LobbyController;
 import client.view.login.LoginController;
 import client.view.phonelog.PhoneLogController;
@@ -115,6 +117,21 @@ public class ViewHandler extends Application
         PhoneLogController phoneLogController = loader.getController();
         phoneLogController.init(this);
         stage.setTitle("Phone Log");
+      }
+      case "AddPerson" -> {
+        loader.setLocation(
+            getClass().getResource("addperson/" + id + "View.fxml"));
+        root = loader.load();
+        AddPersonController addPersonController = loader.getController();
+        addPersonController.init(this);
+        stage.setTitle("Add Person");
+      }
+      case "Help" -> {
+        loader.setLocation(getClass().getResource("help/" + id + "View.fxml"));
+        root = loader.load();
+        HelpController helpController = loader.getController();
+        helpController.init(this);
+        stage.setTitle("Help");
       }
     }
     assert root != null;
